@@ -1,0 +1,131 @@
+:root {
+  --azul: #0c3a7a;
+  --azul-claro: #1a60b0;
+  --dourado: #f7b21a;
+  --texto: #1a2029;
+  --suave: #5b6674;
+  --linha: #e3e8ef;
+  --fundo: #ffffff;
+  --caixa: #f5f8fc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --azul: #7fb0ff;
+    --azul-claro: #9cc4ff;
+    --texto: #e6eaf0;
+    --suave: #a3aebd;
+    --linha: #2a3240;
+    --fundo: #12161c;
+    --caixa: #1a1f27;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+header {
+  background: var(--azul);
+  color: #fff;
+  padding: 2.2rem 1.25rem 1.6rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  header { background: #0c1a30; }
+}
+
+header .interno { max-width: 760px; margin: 0 auto; }
+
+header h1 {
+  margin: 0 0 .35rem;
+  font-size: 1.5rem;
+  letter-spacing: -.01em;
+}
+
+header p { margin: 0; opacity: .85; font-size: .95rem; }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+h2 {
+  margin: 2.2rem 0 .6rem;
+  font-size: 1.15rem;
+  color: var(--azul);
+  border-bottom: 1px solid var(--linha);
+  padding-bottom: .4rem;
+}
+
+h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+
+p, li { color: var(--texto); }
+
+a { color: var(--azul-claro); }
+
+.aviso {
+  background: var(--caixa);
+  border-left: 3px solid var(--dourado);
+  padding: .9rem 1.1rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.2rem 0;
+}
+
+.aviso p { margin: 0; font-size: .95rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .93rem;
+}
+
+.rolagem { overflow-x: auto; }
+
+th, td {
+  text-align: left;
+  padding: .6rem .7rem;
+  border-bottom: 1px solid var(--linha);
+  vertical-align: top;
+}
+
+th { background: var(--caixa); font-weight: 600; }
+
+footer {
+  border-top: 1px solid var(--linha);
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  font-size: .88rem;
+  color: var(--suave);
+}
+
+footer a { color: var(--suave); }
+
+.data { color: var(--suave); font-size: .88rem; }
+
+.botao {
+  display: inline-block;
+  background: var(--dourado);
+  color: #0c3a7a;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .8rem 1.4rem;
+  border-radius: 8px;
+  margin: .4rem .5rem .4rem 0;
+}
+
+.links-topo { margin-top: 1rem; }
+.links-topo a {
+  color: #fff;
+  opacity: .9;
+  margin-right: 1rem;
+  font-size: .92rem;
+}
