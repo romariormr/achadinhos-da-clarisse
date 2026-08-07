@@ -1,0 +1,47 @@
+:root{
+  --rosa:#de316f; --rosa-claro:#fdebf3; --roxo:#926aba; --ouro:#e2b260;
+  --texto:#2d1f2b; --suave:#6b5f68; --linha:#f0e3ea; --fundo:#fff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--texto:#f2e9ef; --suave:#b9a9b4; --linha:#3a2b36; --fundo:#171115;
+        --rosa-claro:#241a21;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--texto);line-height:1.6;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-text-size-adjust:100%}
+h1,h2{line-height:1.2;margin:0 0 .6rem}
+header{padding:2.6rem 1.25rem 2.2rem;text-align:center;
+  background:linear-gradient(160deg,#fde7f1 0%,#efe4fa 100%);color:#2d1f2b}
+.marca{margin:0 0 .8rem;font-weight:700;letter-spacing:.14em;font-size:.78rem;
+  text-transform:uppercase;color:var(--rosa)}
+h1{font-size:clamp(1.6rem,5.5vw,2.5rem)}
+.linha{max-width:36rem;margin:.8rem auto 1.6rem;color:#5b4a56}
+.botao{display:inline-block;background:var(--rosa);color:#fff;text-decoration:none;
+  font-weight:700;padding:1rem 2rem;border-radius:999px;font-size:1.05rem;
+  box-shadow:0 6px 18px rgba(222,49,111,.28)}
+.botao:active{transform:translateY(1px)}
+.mini{font-size:.85rem;color:#6b5f68;margin:.9rem 0 0}
+main{max-width:56rem;margin:0 auto;padding:0 1.25rem}
+section{padding:2.2rem 0;border-bottom:1px solid var(--linha)}
+section:last-child{border:0}
+.sub{color:var(--suave);margin:.2rem 0 1.2rem}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;text-align:center}
+.numeros strong{display:block;font-size:clamp(1.3rem,5vw,2rem);color:var(--rosa)}
+.numeros span{font-size:.8rem;color:var(--suave)}
+.oquee ul{padding-left:1.1rem;margin:0}
+.oquee li{margin:.6rem 0}
+.tiras{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.tiras img{width:100%;border-radius:14px;border:1px solid var(--linha);display:block}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.7rem}
+.cat{display:flex;flex-direction:column;gap:.15rem;text-decoration:none;color:inherit;
+  background:var(--rosa-claro);border:1px solid var(--linha);border-radius:14px;
+  padding:.9rem}
+.cat .ico{font-size:1.5rem}
+.cat .nome{font-weight:700}
+.cat .qtd{font-size:.78rem;color:var(--suave)}
+.franco p{color:var(--suave)}
+footer{padding:2rem 1.25rem 3rem;text-align:center;font-size:.85rem;color:var(--suave)}
+footer a{color:var(--rosa)}
+footer p{margin-top:.8rem}
+@media (min-width:720px){ header{padding:4rem 2rem 3rem} }
