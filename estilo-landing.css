@@ -26,6 +26,26 @@ main{max-width:56rem;margin:0 auto;padding:0 1.25rem}
 section{padding:2.2rem 0;border-bottom:1px solid var(--linha)}
 section:last-child{border:0}
 .sub{color:var(--suave);margin:.2rem 0 1.2rem}
+.lojas{padding-bottom:1.4rem}
+.lojas .sub{text-align:center;margin-bottom:.7rem;font-size:.82rem;
+  text-transform:uppercase;letter-spacing:.1em}
+/* esteira: duplicamos os itens e deslocamos 50%, entao o laco fecha sem salto */
+.esteira{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,
+  #000 12%,#000 88%,transparent)}
+.trilho{display:flex;gap:.7rem;width:max-content;animation:corre 22s linear infinite}
+.esteira:hover .trilho{animation-play-state:paused}
+@keyframes corre{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* quem pediu menos movimento no sistema nao ve a animacao */
+@media (prefers-reduced-motion:reduce){.trilho{animation:none}
+  .esteira{overflow-x:auto}}
+.loja{flex:0 0 auto;padding:.55rem 1.1rem;border-radius:999px;font-weight:700;
+  font-size:.9rem;color:#fff;white-space:nowrap}
+.loja.shopee{background:#ee4d2d}
+.loja.ml{background:#ffe600;color:#2d3277}
+.loja.amz{background:#232f3e}
+.loja.breve{background:transparent;color:var(--suave);
+  border:1px dashed var(--suave);font-weight:600}
+.loja.breve i{font-style:normal;opacity:.75;font-size:.78rem}
 .numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;text-align:center}
 .numeros strong{display:block;font-size:clamp(1.3rem,5vw,2rem);color:var(--rosa)}
 .numeros span{font-size:.8rem;color:var(--suave)}
